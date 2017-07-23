@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Basket implements Buyable{
   private ArrayList<Product> products;
   private ArrayList<Discountable> discounts;
+  private double totalValue = 0;
 
   public Basket() {
     this.products = new ArrayList<Product>();
@@ -27,7 +28,7 @@ public class Basket implements Buyable{
   }
 
   public double totalValue() {  
-    double totalValue = 0;
+    
     for (Product product : products) {   
       totalValue += product.price;        
     }
@@ -44,23 +45,7 @@ public class Basket implements Buyable{
 
   public double applyDiscount(Discount discount)
   {
-      return discount.discount();
+      return discount.discount(totalValue);
   }
 
-
-  public double discountOver20() {
-      double totalValue = 0;
-      for (Product product : products) { 
-        if (product.price > 20) 
-          {
-            totalValue += (product.price ) - (product.price / 10);
-          }
-        else 
-        {
-          totalValue += product.price;   
-        }     
-      }
-      return totalValue;
-
-    }
   }

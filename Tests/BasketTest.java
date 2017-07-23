@@ -45,8 +45,10 @@ public class BasketTest {
   }
 
   @Test
-  public void discountOver20() {
+  public void applyDiscount() {
     basket.add(productOver20);
-    assertEquals(36.00, basket.discountOver20(), 0);
+    TenPercentDiscountOverTwenty tenPercentDiscountOverTwenty = new TenPercentDiscountOverTwenty();
+    basket.applyDiscount(tenPercentDiscountOverTwenty);
+    //assertEquals(36.00, basket.applyDiscount(tenPercentDiscountOverTwenty), 0);
   }
 }
