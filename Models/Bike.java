@@ -12,4 +12,30 @@ public class Bike extends Product{
   public String getName() {
     return this.name;
   }
+
+  public double getPrice() {
+    return this.price;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public String getManufacturer() {
+    return this.manufacturer;
+  }
+
+  public Boolean getHasBuyOneGetOneFree() {
+    return this.hasBuyOneGetOneFree;
+  }
+
+  public String getType() {
+    return this.type;
+  }
+
+  public int getNumberOfWheels() {
+    return this.numberOfWheels;
+  }
+
+
 }
