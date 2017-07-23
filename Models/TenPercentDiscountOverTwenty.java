@@ -1,4 +1,5 @@
 package Models;
+import Interfaces.*;
 public class TenPercentDiscountOverTwenty extends Discount{
 
   public TenPercentDiscountOverTwenty()

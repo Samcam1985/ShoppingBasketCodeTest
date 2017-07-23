@@ -7,19 +7,28 @@ public class BasketTest {
   Basket basket;
   Product product;
   Product productOver20;
+  Product productBuyOneGetOneFree;
 
   @Before
   public void before(){
     basket = new Basket();
-    product = new Football("Football", 7.99, "Suitable for ages 3 and over", "Nike", 5, "Indoor");
-    productOver20 = new Football ("Football", 40.00, "Suitable for ages 3 and over", "Nike", 5, "Indoor");
+    product = new Football("Football", 7.99, "Suitable for ages 3 and over", "Nike", false, 5, "Indoor");
+    productOver20 = new Football ("Football", 40.00, "Suitable for ages 3 and over", "Nike", false, 5, "Indoor");
+    productBuyOneGetOneFree = new Football ("Football", 40.00, "Suitable for ages 3 and over", "Nike", true, 5, "Indoor");
+
 
   }
 
   @Test
-  public void add() {
+  public void addProductNotOnBuyOneGetOneFree() {
     basket.add(product);
     assertEquals(1, basket.countProducts());
+  }
+
+  @Test
+  public void addProductOnBuyOneGetOneFree() {
+    basket.add(productBuyOneGetOneFree);
+    assertEquals(2, basket.countProducts());
   }
 
   @Test

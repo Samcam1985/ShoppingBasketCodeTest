@@ -6,13 +6,20 @@ public class Basket implements Buyable{
   private ArrayList<Product> products;
   private ArrayList<Discountable> discounts;
   private double totalValue = 0;
+  private BuyOneGetOneFree buyOneGetOneFree;
 
   public Basket() {
     this.products = new ArrayList<Product>();
+    this.buyOneGetOneFree = new BuyOneGetOneFree();
   }
 
   public void add(Product product) {
     this.products.add(product);
+    if(this.buyOneGetOneFree.CheckBuyOneGetOneFree(product))
+    {
+      product.price = 0;
+      this.products.add(product);
+    }
   }
 
   public int countProducts() {

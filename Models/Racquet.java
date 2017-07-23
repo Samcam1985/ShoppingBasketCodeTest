@@ -3,8 +3,8 @@ public class Racquet extends Product{
   private String type;
   private int numberOfStrings;
 
-  public Racquet(String name, double price, String description, String manufacturer, String type, int numberOfStrings){
-    super(name, price, description, manufacturer);
+  public Racquet(String name, double price, String description, String manufacturer, Boolean hasBuyOneGetOneFree, String type, int numberOfStrings){
+    super(name, price, description, manufacturer, hasBuyOneGetOneFree);
     this.type = type;
     this.numberOfStrings = numberOfStrings;
   
