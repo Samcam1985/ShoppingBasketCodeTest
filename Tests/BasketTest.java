@@ -6,11 +6,14 @@ import Interfaces.*;
 public class BasketTest {
   Basket basket;
   Product product;
+  Product productOver20;
 
   @Before
   public void before(){
     basket = new Basket();
     product = new Football("Football", 7.99, "Suitable for ages 3 and over", "Nike", 5, "Indoor");
+    productOver20 = new Football ("Football", 40.00, "Suitable for ages 3 and over", "Nike", 5, "Indoor");
+
   }
 
   @Test
@@ -39,5 +42,11 @@ public class BasketTest {
   public void totalValue() {
     basket.add(product);
     assertEquals(7.99, basket.totalValue(), 0);
+  }
+
+  @Test
+  public void discountOver20() {
+    basket.add(productOver20);
+    assertEquals(36.00, basket.discountOver20(), 0);
   }
 }
