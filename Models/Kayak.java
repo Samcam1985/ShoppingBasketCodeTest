@@ -8,4 +8,34 @@ public class Kayak extends Product{
     this.hasPaddles = hasPaddles;
     this.numberOfSeats = numberOfSeats;
   }
+
+    public String getName() {
+      return this.name;
+    }
+
+    public double getPrice() {
+      return this.price;
+    }
+
+    public String getDescription() {
+      return this.description;
+    }
+
+    public String getManufacturer() {
+      return this.manufacturer;
+    }
+
+    public Boolean getHasBuyOneGetOneFree() {
+      return this.hasBuyOneGetOneFree;
+    }
+
+    public Boolean getHasPaddles() {
+      return this.hasPaddles;
+    }
+
+    public int getNumberOfSeats() {
+      return this.numberOfSeats;
+    }
+
+  
 }
