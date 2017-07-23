@@ -8,4 +8,8 @@ public class Bike extends Product{
     this.type = type;
     this.numberOfWheels = numberOfWheels;
   }
+
+  public String getName() {
+    return this.name;
+  }
 }

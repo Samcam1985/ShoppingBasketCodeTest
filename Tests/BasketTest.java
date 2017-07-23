@@ -58,6 +58,6 @@ public class BasketTest {
     basket.add(productOver20);
     TenPercentDiscountOverTwenty tenPercentDiscountOverTwenty = new TenPercentDiscountOverTwenty();
     basket.applyDiscount(tenPercentDiscountOverTwenty);
-    //assertEquals(36.00, basket.applyDiscount(tenPercentDiscountOverTwenty), 0);
+    
   }
 }
